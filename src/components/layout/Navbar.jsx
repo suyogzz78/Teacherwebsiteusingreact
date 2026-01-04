@@ -275,6 +275,7 @@ const Navbar = ({
   const unreadCount = notifications.filter(n => n.unread).length;
 
   return (
+<<<<<<< HEAD
     <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/70 border-b border-black/5">
       <div className="px-6 h-16 flex items-center justify-between">
 
@@ -316,13 +317,75 @@ const Navbar = ({
 
           {/* Notifications */}
           <div className="relative">
+=======
+    <nav className="bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)  bg-[#070621] shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center space-x-3">
+>>>>>>> 543b4b6cd08b4129bf1acc9419f9fe28f3dfdadc
             <button
               onClick={() => setShowNotifications(!showNotifications)}
               className="p-2 rounded-xl hover:bg-black/5 transition relative"
             >
+<<<<<<< HEAD
               <Bell className="h-5 w-5 text-gray-700" />
               {unreadCount > 0 && (
                 <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500" />
+=======
+              {isSidebarOpen ? <X className="h-6 w-6 text-gray-700" /> : <Menu className="h-6 w-6 text-gray-700" />}
+            </button>
+            <div className="flex items-center space-x-2">
+              <div className="h-8 w-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <GraduationCap className="h-5 w-5 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-white">Vedas College</h1>
+                <p className="text-xs text-gray-500">Teacher Management System</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-center space-x-4">
+            <div className="hidden md:block relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-2 w-64 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            
+            <div className="relative">
+              <button 
+                onClick={() => setShowNotifications(!showNotifications)}
+                className="p-2 rounded-lg hover:bg-gray-100 relative transition-colors"
+              >
+                <Bell className="h-5 w-5 text-gray-700" />
+                {unreadCount > 0 && (
+                  <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
+                )}
+              </button>
+              
+              {showNotifications && (
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-100 z-50">
+                  <div className="p-4 border-b border-gray-100 flex justify-between items-center">
+                    <h3 className="font-semibold text-gray-800">Notifications</h3>
+                    <button onClick={markAllAsRead} className="text-sm text-blue-600 hover:text-blue-700">
+                      Mark all read
+                    </button>
+                  </div>
+                  <div className="max-h-96 overflow-y-auto">
+                    {notifications.map(notification => (
+                      <div key={notification.id} className={`p-4 border-b border-gray-50 hover:bg-gray-50 ${!notification.read ? 'bg-blue-50' : ''}`}>
+                        <p className="text-sm font-medium text-gray-800">{notification.message}</p>
+                        <p className="text-xs text-gray-500 mt-1">{notification.time}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+>>>>>>> 543b4b6cd08b4129bf1acc9419f9fe28f3dfdadc
               )}
             </button>
 
@@ -369,11 +432,23 @@ const Navbar = ({
                     .toUpperCase()
                 : "A"}
             </div>
+<<<<<<< HEAD
             <div className="hidden md:block leading-tight">
               <p className="text-sm font-medium text-gray-800">
                 {user?.username || "Admin User"}
               </p>
               <p className="text-xs text-gray-500">Super Admin</p>
+=======
+            
+            <div className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <div className="h-8 w-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                A
+              </div>
+              <div className="hidden md:block">
+                <span className="text-sm font-medium text-white">Admin User</span>
+                <p className="text-xs text-white">Super Admin</p>
+              </div>
+>>>>>>> 543b4b6cd08b4129bf1acc9419f9fe28f3dfdadc
             </div>
           </div>
 
