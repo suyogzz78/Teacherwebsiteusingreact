@@ -17,7 +17,7 @@ const Navbar = ({ currentPage, setCurrentPage, isSidebarOpen, setIsSidebarOpen }
   const unreadCount = notifications.filter(n => !n.read).length;
 
   return (
-    <nav className="bg-purple-300 shadow-lg fixed w-full top-0 z-50 border-b border-gray-100 ">
+    <nav className="bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)  bg-[#070621] shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
@@ -32,7 +32,7 @@ const Navbar = ({ currentPage, setCurrentPage, isSidebarOpen, setIsSidebarOpen }
                 <GraduationCap className="h-5 w-5 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-800">Vedas College</h1>
+                <h1 className="text-xl font-bold text-white">Vedas College</h1>
                 <p className="text-xs text-gray-500">Teacher Management System</p>
               </div>
             </div>
@@ -86,8 +86,8 @@ const Navbar = ({ currentPage, setCurrentPage, isSidebarOpen, setIsSidebarOpen }
                 A
               </div>
               <div className="hidden md:block">
-                <span className="text-sm font-medium text-gray-700">Admin User</span>
-                <p className="text-xs text-gray-500">Super Admin</p>
+                <span className="text-sm font-medium text-white">Admin User</span>
+                <p className="text-xs text-white">Super Admin</p>
               </div>
             </div>
           </div>
