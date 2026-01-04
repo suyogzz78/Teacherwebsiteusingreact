@@ -5,6 +5,7 @@ import {
   Star, TrendingUp, GraduationCap, Clock
 } from 'lucide-react';
 import Modal from '../common/Modal';
+// import teacherImage from '../../data/mockTeachers.js'
 
 const TeacherProfile = ({ teacher, isOpen, onClose }) => {
   if (!teacher) return null;
