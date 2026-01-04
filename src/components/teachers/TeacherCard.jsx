@@ -18,7 +18,7 @@ const TeacherCard = ({ teacher, onDelete, onEdit, onView }) => {
         {label}
       </span>
     );
-  };
+  }; 
 
   return (
     <div 

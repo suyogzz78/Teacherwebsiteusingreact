@@ -48,6 +48,7 @@ const TeacherProfile = ({ teacher, isOpen, onClose }) => {
                   alt={teacher.name}
                   className="h-full w-full object-cover"
                 />
+              
               </div>
               <h3 className="text-xl font-bold">{teacher.name}</h3>
               <p className="text-blue-100">{teacher.faculty} Faculty</p>
@@ -167,3 +168,9 @@ const TeacherProfile = ({ teacher, isOpen, onClose }) => {
 };
 
 export default TeacherProfile;
+
+
+
+
+
+
